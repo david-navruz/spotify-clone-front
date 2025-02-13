@@ -18,8 +18,8 @@ import {AddSongComponent} from './add-song/add-song.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'spotify-clone-front';
 
+  title = 'spotify-clone-front';
 
   private faIconLibrary: FaIconLibrary = inject(FaIconLibrary);
 

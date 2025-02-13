@@ -20,6 +20,10 @@ export class SongService {
   // addSig is a computed signal, which means it reactively derives its value from add$.
   addSig = computed(() => this.add$());
 
+  private getAll$: WritableSignal<State<Array<ReadSong>, HttpErrorResponse>> =
+    signal(State.Builder<Array<ReadSong>, HttpErrorResponse>().forInit().build());
+  getAllSig = computed(() => this.getAll$());
+
 
   add(song: SaveSong) {
     const formData: FormData = new FormData();
@@ -39,9 +43,14 @@ export class SongService {
       })
   }
 
+  // resets the add$ signal to its initial state
   reset(): void {
     this.add$.set(State.Builder<SaveSong, HttpErrorResponse>().forInit().build());
   }
+
+
+
+
 
 
 
