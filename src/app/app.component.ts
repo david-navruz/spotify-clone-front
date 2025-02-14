@@ -9,11 +9,13 @@ import {LibraryComponent} from './layout/library/library.component';
 import {ToastService} from './service/toast.service';
 import {NgbToast} from '@ng-bootstrap/ng-bootstrap';
 import {AddSongComponent} from './add-song/add-song.component';
+import {HomeComponent} from './home/home.component';
+import {SongCardComponent} from './home/song-card/song-card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule, NavigationComponent, HeaderComponent, LibraryComponent, NgbToast, AddSongComponent],
+  imports: [RouterOutlet, FontAwesomeModule, NavigationComponent, HeaderComponent, LibraryComponent, NgbToast, AddSongComponent, HomeComponent, SongCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

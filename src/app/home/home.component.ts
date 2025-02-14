@@ -4,6 +4,7 @@ import {SongCardComponent} from './song-card/song-card.component';
 import {SongService} from '../service/song.service';
 import {ToastService} from '../service/toast.service';
 import {ReadSong} from '../service/model/song.model';
+import {SongContentService} from '../service/song-content.service';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,8 @@ export class HomeComponent {
 
   private songService: SongService = inject(SongService);
   private toastService: ToastService = inject(ToastService);
+  private songContentService: SongContentService = inject(SongContentService);
+
 
   allSongs: Array<ReadSong> | undefined;
 
@@ -41,7 +44,7 @@ export class HomeComponent {
   }
 
   onPlaySong(songToPlayFirst: ReadSong) {
- //   this.songContentService.createNewQueue(songToPlayFirst, this.allSongs!);
+    this.songContentService.createNewQueue(songToPlayFirst, this.allSongs!);
   }
 
 }
