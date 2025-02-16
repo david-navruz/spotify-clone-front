@@ -31,6 +31,7 @@ export class HomeComponent {
    *
    */
   constructor() {
+    this.isLoading = true;
     effect(() => {
       const allSongsResponse = this.songService.getAllSig();
         if (allSongsResponse.status === "OK") {

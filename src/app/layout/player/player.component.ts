@@ -4,6 +4,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {FormsModule} from '@angular/forms';
 import {SongContentService} from '../../service/song-content.service';
 import {ReadSong, SongContent} from '../../service/model/song.model';
+import {Howl} from "howler";
 
 @Component({
   selector: 'app-player',

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {RouterLinkActive} from '@angular/router';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
   imports: [
+    RouterLink,
     RouterLinkActive,
     FaIconComponent
   ],
